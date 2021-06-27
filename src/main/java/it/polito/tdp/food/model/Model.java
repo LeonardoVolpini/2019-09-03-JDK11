@@ -74,7 +74,7 @@ public class Model {
 		return this.best;
 	}
 	private void ricorsione(List<String> parziale, int N, int livello){
-		if(livello==N+1) { //caso terminale
+		if(livello==N) { //caso terminale //forse N+1
 			int massimo= this.pesoParziale(parziale);
 			if(this.best==null || massimo>this.max){ //prima iterazione o ho trovato una soluzione migliore
 				this.max=massimo;

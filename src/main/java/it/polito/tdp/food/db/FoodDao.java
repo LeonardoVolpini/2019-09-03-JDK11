@@ -135,7 +135,7 @@ public class FoodDao {
 	}
 	
 	public List<Adiacenza> getAdiacenze(int C){
-		String sql="SELECT P1.portion_display_name AS n1, P2.portion_display_name AS n2, COUNT(DISTINCT P1.food_code) AS peso "
+		String sql="SELECT P1.portion_display_name AS n1, P2.portion_display_name AS n2, COUNT(*) AS peso "
 				+ "FROM `portion` P1, `portion` P2 "
 				+ "WHERE P1.food_code=P2.food_code "
 				+ "		AND P1.portion_id<>P2.portion_id "
